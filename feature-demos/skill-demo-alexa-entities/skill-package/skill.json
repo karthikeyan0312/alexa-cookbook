@@ -1,0 +1,30 @@
+{
+  "manifest": {
+    "publishingInformation": {
+      "locales": {
+        "en-US": {
+          "summary": "Sample skill for Alexa Entities",
+          "examplePhrases": [
+            "Alexa open knowledge demo",
+            "Tell me something about Canada"
+          ],
+          "name": "Alexa Entities Code Sample",
+          "description": "Sample skill showing how to use Alexa Entities to answer information about a country."
+        }
+      },
+      "isAvailableWorldwide": true,
+      "testingInstructions": "Sample Testing Instructions.",
+      "category": "KNOWLEDGE_AND_TRIVIA",
+      "distributionCountries": []
+    },
+    "apis": {
+      "custom": {
+        "endpoint": {
+          "sourceDir": "lambda",
+          "uri": "ask-demo-lambda-function-name"
+        }
+      }
+    },
+    "manifestVersion": "1.0"
+  }
+}
