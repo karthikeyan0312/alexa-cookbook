@@ -31,7 +31,7 @@ var localPersistenceAdapter = /** @class */ (function () {
 
   localPersistenceAdapter.prototype.getAttributes = function (request_envelope) {
     //get user ID and create shorter unique hash for filename
-    let userId = request_envelope.session.user.userId;
+    let userId = request_envelope.session? request_envelope.session.user.userId : request_envelope.context.System.user.userId;
     userId = sha(userId);
     var filepath = __dirname + "/" + this.pathPrefix + "/" + userId + ".json";
 
@@ -53,7 +53,7 @@ var localPersistenceAdapter = /** @class */ (function () {
    */
 
   localPersistenceAdapter.prototype.saveAttributes = function (request_envelope, attributes) {
-    var userId = request_envelope.session.user.userId;
+    var userId = request_envelope.session? request_envelope.session.user.userId : request_envelope.context.System.user.userId;
     userId = sha(userId);
     var save_path = __dirname + "/" + this.pathPrefix + "/" + userId + ".json";
     return new Promise(function (resolve, reject) {
