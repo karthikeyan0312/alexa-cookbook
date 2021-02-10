@@ -1,0 +1,17 @@
+{
+  "name": "alexa-entities-cookbook-example",
+  "version": "0.1.0",
+  "description": "Code sample for Alexa Entities",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Amazon Alexa",
+  "license": "Amazon Software License 1.0",
+  "dependencies": {
+    "ask-sdk-core": "^2.10.1",
+    "ask-sdk-model": "^1.34.1",
+    "aws-sdk": "^2.828.0",
+    "axios": "^0.21.1"
+  }
+}
